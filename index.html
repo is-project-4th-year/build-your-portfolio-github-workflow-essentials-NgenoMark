@@ -134,6 +134,38 @@
         .github-link:hover {
             background-color: #0366d6;
         }
+
+                form input, form textarea, form button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        form button {
+            background-color: #1e1e2f;
+            color: white;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #ffcc00;
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            .project {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project img {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -181,6 +213,17 @@
                 <a href="https://github.com/NgenoMark/IndraMapVendor" target="_blank" class="github-link">View on GitHub</a>
             </div>
         </div>
+    </section>
+
+        <!-- Contact Form -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="mailto:kipchumbamark48@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
 </body>
