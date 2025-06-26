@@ -33,6 +33,34 @@
         header nav a:hover {
             color: #ffcc00;
         }
+
+                section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.about-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    border: 3px solid #ccc;
+}
+
+.about-content p {
+    flex: 1;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
     </style>
 </head>
 <body>
@@ -48,7 +76,17 @@
         </nav>
     </header>
 
+        <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+        <img src="eagle2.jpg" alt="Mark's Photo">
+        <p>Hello! I'm Mark, a passionate developer with experience in building modern web applications and systems. I enjoy turning ideas into reality using code, and even more so, solving problems that matter.</p>
+        </div>
+    </section>
 
 
-</body>
+
+
+</body>`
 </html>
