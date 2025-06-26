@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark's Portfolio</title>
+    <style>
+                body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #1e1e2f;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header nav {
+            margin-top: 20px;
+        }
+
+        header nav a {
+            color: #ffffffcc;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            color: #ffcc00;
+        }
+
+                section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.about-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    border: 3px solid #ccc;
+}
+
+.about-content p {
+    flex: 1;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #222;
+        }
+
+        .project {
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project.reverse {
+            flex-direction: row-reverse;
+        }
+
+.project img {
+    max-width: 300px;
+    width: 100%;
+    aspect-ratio: auto;
+    height: auto;
+    max-height: 250px;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+
+        .project-details {
+            flex: 1;
+        }
+
+        .project-details h3 {
+            margin-top: 0;
+        }
+
+        .project-details p {
+            margin: 8px 0;
+        }
+
+        .project-details a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            background-color: #1e1e2f;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .project-details a:hover {
+            background-color: #ffcc00;
+            color: #000;
+        }
+
+        .github-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #24292e; /* GitHub black */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.github-link:hover {
+    background-color: #0366d6; /* GitHub blue */
+}
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Landing Page -->
+    <header id="home">
+        <h1>Welcome to Mark's Portfolio</h1>
+        <p>Developer | Designer | Problem Solver</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+        <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+        <img src="eagle2.jpg" alt="Mark's Photo">
+        <p>Hello! I'm Mark, a passionate developer with experience in building modern web applications and systems. I enjoy turning ideas into reality using code, and even more so, solving problems that matter.</p>
+        </div>
+    </section>
+
+        <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <img src="spacehub.jpg" alt="SpaceHub Screenshot">
+            <div class="project-details">
+                <h3>SpaceHub</h3>
+                <p><strong>Description:</strong> An app that hosts and offers all indoor and outdoor venues in one place for renting.</p>
+                <p><strong>Technologies Used:</strong> HTML/CSS (Frontend), Laravel (Backend), MySQL (Database)</p>
+                <a href="https://github.com/NgenoMark/Space-Hub" target="_blank" class="github-link">View on GitHub</a>
+
+                <!-- <a href="#" target="_blank">Watch Project</a> -->
+            </div>
+        </div>
+
+        <div class="project reverse">
+            <img src="mapvendor2.jpg" alt="Map Vendor Screenshot">
+            <div class="project-details">
+                <h3>Map Vendor</h3>
+                <p><strong>Description:</strong> A mobile app connecting electricity vendors to clients needing installation services.</p>
+                <p><strong>Technologies Used:</strong> Flutter (Frontend), Java + Spring Boot (Backend), Oracle (Database)</p>
+                <a href="https://github.com/NgenoMark/IndraMapVendor" target="_blank" class="github-link">View on GitHub</a>
+
+                <!-- <a href="#" target="_blank">Watch Project</a> -->
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+</body>`
+</html>
