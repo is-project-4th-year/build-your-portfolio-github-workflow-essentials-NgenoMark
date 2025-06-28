@@ -2,10 +2,10 @@
 
 ## 1. Student Details
 
-- **Ngeno Mark Kipchumba**:
-- **151430**:
-- **GitHub Username : NgenoMark**:
-- **kipchumbamark48@gmail.com**:
+- **Student Name**: Ngeno Mark Kipchumba
+- **Admission**: 151430
+- **GitHub Username** : NgenoMark
+- **Email** : kipchumbamark48@gmail.com
 
 ## 2. Deployed Portfolio Link
 
@@ -16,29 +16,39 @@
 
 Write about **4 things** you expected to learn during the Git crash course (yes, we all came in with some big hopes 😅).
 For each one, mention:
+1. **Concept: Naming Convention**
+Expectation: Based on all projects i had worked on, standard names were used to trak and work on progress such as master, progress etc
 
-**1**
-Based on the tutorials we had done in class i thought everything would be easy.
+Reality: When working in both group settings and personal project, it is a good practice to use named branches to understand the purpose of each branch. I had to create a total of 7 branches which all could do the same thing but this created better order and purpose.
+
+Impact: Now depending on the project I understand why i would need specific branches to work on specific sections of my work.
+
+2. **Concept: GitHub Issues & Project Board**
+
+Expectation: I assumed the project board was optional or just for tracking big commercial apps and that i would just create it and never interact with it.
+
+Reality: The board helped me stay organized. Each issue and milestone was easier to manage when I saw it under “To Do”, “In Progress”, or “Done”. This made things also cleaner.
+
+Impact: It made the entire process feel easy and helped me complete work in steps instead of working randomly.
 
 
-What you thought it would be like **(Expectation 👀)**
+3. **Concept: Pull Requests & Merge Conflicts**
 
-What you actually learned **(Reality 😅)**
+Expectation: I thought pull requests were only needed for team collaborations and that conflicts were rare.
 
-And how it helped with your personal portfolio project 💻
+Reality: Conflicts happen easily—even when I’m working alone. Using pull requests helped me track and control changes, and resolving a conflict taught me how to be careful with overlapping edits. Sometimes being careful did not matter i still ended up witht a conflict that took me an hour to resolve simply because I did not  understand what conflict i was working on.
 
-make it honest—and if it surprised you, even better!
+Impact: I simulated and resolved a merge conflict between two branches that edited the same line in index.html. I now understand the importance of order and undertanding of documentation.
 
-Example format:
 
-**🧠 What I Thought I'd Learn vs What I Actually Learned**
-**1. Concept: Branching**
+4. **Concept: Deployment via GitHub Pages**
 
-`Expectation 👀` : I thought branching was just for developers working on big apps—nothing I’d need for a small project.
+Expectation: I thought deployment was something that required Firebase setup or even buying a domain since that is what we are used to doing.
 
-`Reality 😅`: Turns out even solo devs need branches! It helped me avoid breaking my main code while testing new designs.
+Reality: GitHub Pages made it simple to publish my portfolio by just pushing to the main branch. No extra things needed.
 
-`Impact 💡`: I created a feature branch for my "About Me" section and merged it smoothly into the main branch after testing. Super useful!
+Impact: My site is now live and I can share it with others as a sample of my work.
+
 
 ## 4. Screenshots of Key GitHub Features
 
@@ -63,11 +73,14 @@ I ccan clearly track what to do and how to keep oneself accountable from the pro
 
 
 
-
 ### C. Branching
 
-- Screenshot showing your branch list with meaningful naming.
-
+![alt text](image-7.png)
+The above screenshot shows all the branches present during the working of this project:
+They were named by type of work and a number
+example 
+1. feature/2-landing page - A feature we added on our portfolio was the landing page structure and this was issue number 2 and thus one can easily interpret the name
+2. doc/12-documentation - This was a branch specifically to edit document files such as the documentatin.md
 
 
 
@@ -75,7 +88,6 @@ I ccan clearly track what to do and how to keep oneself accountable from the pro
 
 ![alt text](image-4.png)
 The image above displays a pull request linked specifically to the contact section, this was the last section being worked on and immediately after completion a pull request was created to keep the main branch up to date. 
-
 
 
 
