@@ -2,10 +2,10 @@
 
 ## 1. Student Details
 
-- **Full Name**:
-- **Admission Number**:
-- **GitHub Username**:
-- **Email**:
+- **Ngeno Mark Kipchumba**:
+- **151430**:
+- **GitHub Username : NgenoMark**:
+- **kipchumbamark48@gmail.com**:
 
 ## 2. Deployed Portfolio Link
 
@@ -16,6 +16,10 @@
 
 Write about **4 things** you expected to learn during the Git crash course (yes, we all came in with some big hopes 😅).
 For each one, mention:
+
+**1**
+Based on the tutorials we had done in class i thought everything would be easy.
+
 
 What you thought it would be like **(Expectation 👀)**
 
@@ -38,31 +42,47 @@ Example format:
 
 ## 4. Screenshots of Key GitHub Features
 
-Include screenshots that demonstrate how you used GitHub to manage your project. For each screenshot, write a short caption explaining what it shows.
-
-> Upload the screenshots to your GitHub repository and reference them here using Markdown image syntax:
-> (you could just simply copy and paste the image into the Assignment.md)
-
-```markdown
-![Caption](path/to/your/image.png)
-```
-
 ### A. Milestones and Issues
 
-- Screenshot showing your milestone(s) and the issues linked to it.
+![alt text](image.png)
+The above image shows all the milestones that define this project from start to end. Some of the major milestones as can be seen are Landing Page, About Section, Contact Section.
+
+
+![alt text](image-1.png)
+![alt text](image-2.png)
+The above images show the opened and closed issues under the landing page milestone that was worked upon, we are able to track progress by completion percantage.
+
+
 
 ### B. Project Board
 
-- Screenshot of your GitHub Project Board with issues organized into columns (e.g., To Do, In Progress, Done).
+![alt text](image-3.png)
+The above image shows my Project Board(Mark's Portfolio).
+It classifies all issues into ToDo, In Progress and Done.
+I ccan clearly track what to do and how to keep oneself accountable from the project board.
+
+
+
 
 ### C. Branching
 
 - Screenshot showing your branch list with meaningful naming.
 
+
+
+
 ### D. Pull Requests
 
-- Screenshot of a pull request that’s either open or merged and linked to a related issue.
+![alt text](image-4.png)
+The image above displays a pull request linked specifically to the contact section, this was the last section being worked on and immediately after completion a pull request was created to keep the main branch up to date. 
+
+
+
 
 ### E. Merge Conflict Resolution
 
-- Screenshot of a resolved merge conflict (in a pull request, commit history, or your local terminal/GitHub Desktop).
+![alt text](image-5.png)
+![alt text](image-6.png)
+
+The above image shows a merge conflict expereience while working on issue to add the project section.
+Several lines had overlapped and we had an issue in trying to resolve in github because the feature to show the conflicts was not present and thus it took a lot of time to understand what had overlapped.
