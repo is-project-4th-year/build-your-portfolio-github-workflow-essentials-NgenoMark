@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mark Kipchumba | Portfolio</title>
+  <link rel="icon" href="images/hacker.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(120deg, #1e1e2f, #2c2c3c);
+      color: white;
+      text-align: center;
+      padding: 60px 20px 80px;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      height: 50px;
+      background-color: #121212;
+      border-radius: 0 0 50% 50%;
+    }
+
+    nav a {
+      color: #ffffffcc;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInSection 1s forwards;
+    }
+
+    section:nth-of-type(2) {
+      animation-delay: 0.2s;
+    }
+    section:nth-of-type(3) {
+      animation-delay: 0.4s;
+    }
+    section:nth-of-type(4) {
+      animation-delay: 0.6s;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 40px;
+      color: #ffcc00;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      width: 60px;
+      height: 4px;
+      background: #ffcc00;
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      transform: translateX(-50%);
+    }
+
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .about-content img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid #444;
+      object-fit: cover;
+    }
+
+    .about-content p {
+      flex: 1;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .project {
+      background: #1e1e2f;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 40px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .project:hover {
+      box-shadow: 0 0 30px rgba(255, 204, 0, 0.6);
+      transform: translateY(-5px);
+    }
+
+    .project.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .project img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+
+    .project-details {
+      flex: 1;
+    }
+
+    .project-details h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #ffcc00;
+    }
+
+    .project-details p {
+      margin: 10px 0;
+      color: #ccc;
+    }
+
+    .github-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #24292e;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    .github-link:hover {
+      background: #0366d6;
+    }
+
+    form {
+      background: #1e1e2f;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    }
+
+    form input,
+    form textarea,
+    form button {
+      width: 100%;
+      padding: 15px;
+      margin-top: 12px;
+      border-radius: 6px;
+      border: 1px solid #555;
+      font-size: 1rem;
+      background: #2c2c3c;
+      color: #eee;
+    }
+
+    form button {
+      background: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #fff176;
+    }
+
+    .favicons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 70px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .favicons img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #444;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 5px;
+      background-color: #2c2c3c;
+    }
+
+    .favicons img:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+      border-color: #ffcc00;
+    }
+
+    @keyframes fadeInSection {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-content,
+      .project {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Mark Kipchumba</h1>
+    <p>Full Stack Developer | UI/UX Designer | Innovator</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="images/mark.png" alt="Mark Kipchumba" />
+      <p>
+        Hi, I'm <strong>Mark Kipchumba</strong> — a passionate full-stack developer who thrives on building scalable digital solutions. Whether it's a responsive web interface or an API-powered backend, I focus on clean code and user-centered design. I'm also fascinated by problem solving, emerging technologies, and blending creativity with logic.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Featured Projects</h2>
+
+    <div class="project">
+      <img src="images/spacehub.jpg" alt="SpaceHub Screenshot" />
+      <div class="project-details">
+        <h3>SpaceHub</h3>
+        <p><strong>Description:</strong> A platform aggregating indoor and outdoor spaces available for event bookings.</p>
+        <p><strong>Technologies:</strong> HTML/CSS, Laravel, MySQL</p>
+        <a href="https://github.com/NgenoMark/Space-Hub" target="_blank" class="github-link">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="project reverse">
+      <img src="images/mapvendor2.jpg" alt="Map Vendor Screenshot" />
+      <div class="project-details">
+        <h3>Map Vendor</h3>
+        <p><strong>Description:</strong> A mobile platform connecting clients to licensed electricians for real-time installations.</p>
+        <p><strong>Technologies:</strong> Flutter, Spring Boot, Oracle</p>
+        <a href="https://github.com/NgenoMark/IndraMapVendor" target="_blank" class="github-link">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Icons -->
+  <div class="favicons">
+    <a href="https://www.instagram.com/ngeno.mark" target="_blank" title="Instagram">
+      <img src="images/instagram.png" alt="Instagram" />
+    </a>
+    <a href="https://www.linkedin.com/in/mark-kipchumba-a68879276/" target="_blank" title="Linkedin">
+      <img src="images/linkedin.png" alt="Linkedin" />
+    </a>
+    <a href="https://github.com/NgenoMark" target="_blank" title="GitHub">
+      <img src="images/github.png" alt="GitHub" />
+    </a>
+  </div>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="mailto:kipchumbamark48@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</body>
+</html>
