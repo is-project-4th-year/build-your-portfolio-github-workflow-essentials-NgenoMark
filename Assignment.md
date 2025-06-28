@@ -54,19 +54,19 @@ Impact: My site is now live and I can share it with others as a sample of my wor
 
 ### A. Milestones and Issues
 
-![alt text](image.png)
+![alt text](images/image.png)
 The above image shows all the milestones that define this project from start to end. Some of the major milestones as can be seen are Landing Page, About Section, Contact Section.
 
 
-![alt text](image-1.png)
-![alt text](image-2.png)
+![alt text](images/image-1.png)
+![alt text](images/image-2.png)
 The above images show the opened and closed issues under the landing page milestone that was worked upon, we are able to track progress by completion percantage.
 
 
 
 ### B. Project Board
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 The above image shows my Project Board(Mark's Portfolio).
 It classifies all issues into ToDo, In Progress and Done.
 I ccan clearly track what to do and how to keep oneself accountable from the project board.
@@ -75,7 +75,8 @@ I ccan clearly track what to do and how to keep oneself accountable from the pro
 
 ### C. Branching
 
-![alt text](image-7.png)
+![alt text](images/image-7.png)
+
 The above screenshot shows all the branches present during the working of this project:
 They were named by type of work and a number
 example 
@@ -86,15 +87,15 @@ example
 
 ### D. Pull Requests
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 The image above displays a pull request linked specifically to the contact section, this was the last section being worked on and immediately after completion a pull request was created to keep the main branch up to date. 
 
 
 
 ### E. Merge Conflict Resolution
 
-![alt text](image-5.png)
-![alt text](image-6.png)
+![alt text](images/image-5.png)
+![alt text](images/image-6.png)
 
 The above image shows a merge conflict expereience while working on issue to add the project section.
 Several lines had overlapped and we had an issue in trying to resolve in github because the feature to show the conflicts was not present and thus it took a lot of time to understand what had overlapped.
