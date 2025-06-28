@@ -6,11 +6,13 @@
 - **Admission**: 151430
 - **GitHub Username** : NgenoMark
 - **Email** : kipchumbamark48@gmail.com
+- **School Email** : mark.nge-@strathmore.edu
 
 ## 2. Deployed Portfolio Link
 
 - **GitHub Pages URL**:  
-  _(Provide the live link to your deployed portfolio website)_
+  
+  https://is-project-4th-year.github.io/build-your-portfolio-github-workflow-essentials-NgenoMark/
 
 ## 3. Learnings from the Git Crash Program
 
