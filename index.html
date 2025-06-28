@@ -1,230 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mark's Portfolio</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mark Kipchumba | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-        header {
-            background-color: #1e1e2f;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        header nav {
-            margin-top: 20px;
-        }
+    header {
+      background: linear-gradient(120deg, #1e1e2f, #2c2c3c);
+      color: white;
+      text-align: center;
+      padding: 60px 20px 80px;
+      position: relative;
+    }
 
-        header nav a {
-            color: #ffffffcc;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      height: 50px;
+      background-color: white;
+      border-radius: 0 0 50% 50%;
+    }
 
-        header nav a:hover {
-            color: #ffcc00;
-        }
+    nav a {
+      color: #ffffffcc;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
 
-        section {
-            max-width: 1000px;
-            margin: auto;
-            padding: 40px 20px;
-        }
+    nav a:hover {
+      color: #ffcc00;
+    }
 
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-        .about-content img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #ccc;
-        }
+    h2 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 40px;
+      color: #222;
+      position: relative;
+    }
 
-        .about-content p {
-            flex: 1;
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
+    h2::after {
+      content: '';
+      width: 60px;
+      height: 4px;
+      background: #ffcc00;
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      transform: translateX(-50%);
+    }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #222;
-        }
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      animation: fadeIn 1.5s ease;
+    }
 
-        .project {
-            background: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05);
-            border-radius: 10px;
-            margin-bottom: 30px;
-            overflow: hidden;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 20px;
-        }
+    .about-content img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid #ddd;
+      object-fit: cover;
+    }
 
-        .project.reverse {
-            flex-direction: row-reverse;
-        }
+    .about-content p {
+      flex: 1;
+      font-size: 1.1rem;
+      color: #444;
+    }
 
-        .project img {
-            max-width: 300px;
-            width: 100%;
-            aspect-ratio: auto;
-            height: auto;
-            max-height: 250px;
-            border-radius: 10px;
-            object-fit: contain;
-        }
+    .project {
+      background: white;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 40px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      animation: slideUp 1s ease;
+    }
 
-        .project-details {
-            flex: 1;
-        }
 
-        .project-details h3 {
-            margin-top: 0;
-        }
 
-        .project-details p {
-            margin: 8px 0;
-        }
+    .project.reverse {
+      flex-direction: row-reverse;
+    }
 
-        .project-details a {
-            display: inline-block;
-            margin-top: 10px;
-            text-decoration: none;
-            background-color: #1e1e2f;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-        }
+    .project img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: contain;
+    }
 
-        .project-details a:hover {
-            background-color: #ffcc00;
-            color: #000;
-        }
+    .project-details {
+      flex: 1;
+    }
 
-        .github-link {
-            display: inline-block;
-            margin-top: 10px;
-            text-decoration: none;
-            background-color: #24292e;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
+    .project-details h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #1e1e2f;
+    }
 
-        .github-link:hover {
-            background-color: #0366d6;
-        }
+    .project-details p {
+      margin: 10px 0;
+    }
 
-                form input, form textarea, form button {
-            width: 100%;
-            padding: 12px;
-            margin-top: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-        }
+    .github-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #24292e;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
 
-        form button {
-            background-color: #1e1e2f;
-            color: white;
-            cursor: pointer;
-        }
+    .github-link:hover {
+      background: #0366d6;
+    }
 
-        form button:hover {
-            background-color: #ffcc00;
-            color: #000;
-        }
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    }
 
-        @media (max-width: 768px) {
-            .project {
-                flex-direction: column;
-                align-items: center;
-            }
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 15px;
+      margin-top: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
 
-            .project img {
-                width: 100%;
-                max-width: 100%;
-            }
-        }
-    </style>
+    form button {
+      background: #1e1e2f;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #ffcc00;
+      color: black;
+    }
+
+
+  </style>
 </head>
 <body>
 
-    <!-- Landing Page -->
-    <header id="home">
-        <h1>Welcome to Mark's Portfolio</h1>
-        <p>Developer | Designer | Problem Solver</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <h1>Mark Kipchumba</h1>
+    <p>Full Stack Developer | UI/UX Designer | Innovator</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <img src="eagle2.jpg" alt="Mark's Photo">
-            <p>Hello! I'm Mark, a passionate developer with experience in building modern web applications and systems. I enjoy turning ideas into reality using code, and even more so, solving problems that matter.</p>
-        </div>
-    </section>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="eagle2.jpg" alt="Mark Kipchumba">
+      <p>
+        Hi, I'm <strong>Mark Kipchumba</strong> — a passionate full-stack developer who thrives on building scalable digital solutions. Whether it's a responsive web interface or an API-powered backend, I focus on clean code and user-centered design. I'm also fascinated by problem solving, emerging technologies, and blending creativity with logic.
+      </p>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Featured Projects</h2>
 
-        <div class="project">
-            <img src="spacehub.jpg" alt="SpaceHub Screenshot">
-            <div class="project-details">
-                <h3>SpaceHub</h3>
-                <p><strong>Description:</strong> An app that hosts and offers all indoor and outdoor venues in one place for renting.</p>
-                <p><strong>Technologies Used:</strong> HTML/CSS (Frontend), Laravel (Backend), MySQL (Database)</p>
-                <a href="https://github.com/NgenoMark/Space-Hub" target="_blank" class="github-link">View on GitHub</a>
-            </div>
-        </div>
+    <div class="project">
+      <img src="spacehub.jpg" alt="SpaceHub Screenshot">
+      <div class="project-details">
+        <h3>SpaceHub</h3>
+        <p><strong>Description:</strong> A platform aggregating indoor and outdoor spaces available for event bookings.</p>
+        <p><strong>Technologies:</strong> HTML/CSS, Laravel, MySQL</p>
+        <a href="https://github.com/NgenoMark/Space-Hub" target="_blank" class="github-link">View on GitHub</a>
+      </div>
+    </div>
 
-        <div class="project reverse">
-            <img src="mapvendor2.jpg" alt="Map Vendor Screenshot">
-            <div class="project-details">
-                <h3>Map Vendor</h3>
-                <p><strong>Description:</strong> A mobile app connecting electricity vendors to clients needing installation services.</p>
-                <p><strong>Technologies Used:</strong> Flutter (Frontend), Java + Spring Boot (Backend), Oracle (Database)</p>
-                <a href="https://github.com/NgenoMark/IndraMapVendor" target="_blank" class="github-link">View on GitHub</a>
-            </div>
-        </div>
-    </section>
+    <div class="project reverse">
+      <img src="mapvendor2.jpg" alt="Map Vendor Screenshot">
+      <div class="project-details">
+        <h3>Map Vendor</h3>
+        <p><strong>Description:</strong> A mobile platform connecting clients to licensed electricians for real-time installations.</p>
+        <p><strong>Technologies:</strong> Flutter, Spring Boot, Oracle</p>
+        <a href="https://github.com/NgenoMark/IndraMapVendor" target="_blank" class="github-link">View on GitHub</a>
+      </div>
+    </div>
+  </section>
 
-        <!-- Contact Form -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="mailto:kipchumbamark48@gmail.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="mailto:kipchumbamark48@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-</body>`
+</body>
 </html>
